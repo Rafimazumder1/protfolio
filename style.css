@@ -84,6 +84,9 @@ header{
     flex-flow: column;
     text-align: center;
 }
+.user{
+    margin-top: 10px;
+}
 
 header .user img{
     height:17rem;
