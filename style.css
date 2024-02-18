@@ -80,19 +80,20 @@ header{
     background:#000000;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-flow: column;
     text-align: center;
 }
 .user{
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 header .user img{
     height:17rem;
     width:17rem;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover;
+
     margin-bottom:.5rem;
     border:.7rem solid var(--yellow);
 }
@@ -244,6 +245,7 @@ header .follow a:hover{
     
 }
 
+
 .education .box-container .box{
     width:27rem;
     margin:4rem 1rem;
@@ -251,6 +253,7 @@ header .follow a:hover{
     border-left: .2rem solid rgb(255, 255, 255);
     position: relative;
 }
+
 
 .education .box-container .box span{
     font-size: 1.3rem;
@@ -260,6 +263,7 @@ header .follow a:hover{
     padding:.5rem 2.5rem;
 }
 
+
 .education .box-container .box h3{
     font-size:1.5rem;
     color:#f9ca24;
@@ -268,11 +272,13 @@ header .follow a:hover{
 
 
 
+
 .education .box-container .box p{
     font-size: 1.4rem;
     color:#eee;
     padding: 1rem 0;
 }
+
 
 .education .box-container .box i{
     position: absolute;
@@ -286,6 +292,61 @@ header .follow a:hover{
     color:rgb(0, 0, 0);
     background:var(--yellow);
 }
+.expereince .box-container .box p{
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+.expereince .box-container .box h3{
+    font-size:1.5rem;
+    color:#f9ca24;
+    padding-top: 1.5rem;
+}
+.expereince .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:1rem;
+    padding-left: 3rem 0;
+    
+}
+.expereince .box-container .box{
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid rgb(255, 255, 255);
+    position: relative;
+}
+.expereince .box-container .box span{
+    font-size: 1.3rem;
+    background:rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+.expereince .box-container .box i{
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    background:var(--yellow);
+}
+.expereince .heading img{
+    background-color: #000000;
+    border: 5px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+
+
 
 .contact .row{
     display:block;
@@ -337,6 +398,8 @@ header .follow a:hover{
     color:rgb(255, 255, 255);
     padding:1rem 0;
     font-weight: normal;
+    text-transform:none;
+    text-decoration: none;
 }
 
 .contact .row .content .info h3 i{
@@ -402,6 +465,9 @@ header .follow a:hover{
     }
  
     .education .box-container .box{
+        width:100%;
+    }
+    .expereince .box-container .box{
         width:100%;
     }
 
