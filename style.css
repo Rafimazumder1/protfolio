@@ -76,7 +76,7 @@ header{
     position: fixed;
     top:0; left:0;
     z-index: 1000;
-    width:35rem;
+    width:32rem;
     background:#000000;
     display: flex;
     align-items: center;
@@ -85,17 +85,16 @@ header{
     text-align: center;
 }
 .user{
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 header .user img{
     height:17rem;
     width:17rem;
-    border-radius: 50%;
+    border-radius: 49%;
     object-fit:cover;
-
-    margin-bottom:.5rem;
-    border:.7rem solid var(--yellow);
+    /* margin-bottom:.4rem; */
+    border:.6rem solid var(--yellow);
 }
 
 header .user .name{
@@ -123,7 +122,7 @@ header .navbar ul{
 header .navbar ul li a{
     display: block;
     padding:1rem;
-    margin:1rem 0;
+    margin:.9rem 0;
     padding-left: 20px;
     background:#333;
     color:#fff;
@@ -147,13 +146,13 @@ header .follow a:hover{
 
 #menu{
     position: fixed;
-    top:2rem; right:2rem;
+    top:2rem;
     background:rgb(0, 0, 0);
     color:#fff;
     cursor: pointer;
     font-size: 2.5rem;
     padding:1rem 1.5rem;
-    z-index: 1000;
+    z-index:1000;
     display: none;
 }
 
@@ -428,37 +427,59 @@ header .follow a:hover{
        left:-120%;
    }
 
-   #menu{
-       display: block;
-   }
-
-   header.toggle{
-    left:0%;
-   }
-
-   body{
-       padding:0;
-   }
-
+   #menu {
+    display: block;
+    position: fixed; /* To keep the menu fixed at the same position when scrolling */
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+    cursor: pointer;
 }
 
-@media (max-width:768px){
+#menu.open {
+    transform: translateX(0);
+}
 
-    html{
-        font-size: 50%;
+.menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #fff; /* Adjust the background color as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a better look */
+    z-index: 1000; /* Adjust the z-index to make sure it's above other elements */
+}
+
+#menu.open .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Add additional styles as needed for your menu items */
+.menu-item {
+    padding: 10px;
+    /* Add more styling for the menu items */
+}
+
+/* Add your existing styles for header.toggle and other elements here */
+
+@media only screen and (max-width: 768px) {
+    header.toggle {
+        height: auto; /* Adjust the height for smaller screens */
+        overflow: hidden;
     }
- 
- }
 
-@media (max-width:400px){
-
-    header{
-        width: 100vw;
+    header.toggle:not(.open) .navbar {
+        display: none; /* Hide the navigation by default */
     }
 
-    .heading{
-        margin:0 3rem;
+    header.toggle.open .navbar {
+        display: block; /* Show the navigation when the menu is open */
     }
+}
 
     .about .row .counter .box{
         width: 100%;
